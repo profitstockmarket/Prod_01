@@ -1,0 +1,28 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add New Stock</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+
+<label>Stock Name : <input type="text" [(ngModel)] = "stockname"></label>
+<label>Stock Code : <input type="text" [(ngModel)] = "stockcode"></label>
+<label>CMP: <input type="text" [(ngModel)] = "cmp"></label>
+<label>Reco date : <input type="date" [(ngModel)] = "recodate"></label>
+<label>Reco Price : <input type="number" [(ngModel)] = "recoprice"></label>
+<label>Target Price : <input type="number" [(ngModel)] = "targetPrice"></label>
+<label>Duration : <input type="number" [(ngModel)] = "duration"></label>
+<label>Do I Hold : <input type="text" [(ngModel)] = "disclaimer"></label>
+<label>Sector : <input type="text" [(ngModel)] = "sector"></label>
+<label>Market Cap : <input type="text" [(ngModel)] = "marketcap"></label>
+
+
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-primary"(click)="AddStock()">
+Add
+</button>
+  <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Close</button>
+</div>

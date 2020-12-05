@@ -1,0 +1,119 @@
+[
+ {
+   "Stock Name": "India Bulls Housing Finance",
+   "CMP": 315,
+   "Reco date": "6/2/20",
+   "Target Price": 375,
+   "Duration": 6,
+   "Do I Hold It ?": "YES",
+   "Status": "Active"
+ },
+ {
+   "Stock Name": "HDFC Bank",
+   "CMP": 1240,
+   "Reco date": "6/1/20",
+   "Target Price": 1400,
+   "Duration": 12,
+   "Do I Hold It ?": "YES",
+   "Status": "Active"
+ },
+ {
+   "Stock Name": "HDFC Standard Life Insurance",
+   "CMP": 619,
+   "Reco date": "6/1/20",
+   "Target Price": 755,
+   "Duration": 12,
+   "Do I Hold It ?": "YES",
+   "Status": "Active"
+ },
+ {
+   "Stock Name": "Axis Bank",
+   "CMP": 723.25,
+   "Reco date": "6/1/20",
+   "Target Price": 900,
+   "Duration": 12,
+   "Do I Hold It ?": "YES",
+   "Status": "Active"
+ },
+ {
+   "Stock Name": "ICICI Bank",
+   "CMP": 525.95,
+   "Reco date": "6/1/20",
+   "Target Price": 650,
+   "Duration": 12,
+   "Do I Hold It ?": "YES",
+   "Status": "Active"
+ },
+ {
+   "Stock Name": "Amber Enterprises",
+   "CMP": 1135.25,
+   "Reco date": "6/1/20",
+   "Target Price": 1450,
+   "Duration": 12,
+   "Do I Hold It ?": "YES",
+   "Status": "Target Achieved"
+ },
+ {
+   "Stock Name": "Ultratech Cement",
+   "CMP": 4157.1,
+   "Reco date": "6/1/20",
+   "Target Price": 4800,
+   "Duration": 12,
+   "Do I Hold It ?": "YES",
+   "Status": "Target Achieved"
+ },
+ {
+   "Stock Name": "Century Textiles",
+   "CMP": 475.3,
+   "Reco date": "6/1/20",
+   "Target Price": 580,
+   "Duration": 6,
+   "Do I Hold It ?": "YES",
+   "Status": "Target Achieved"
+ },
+ {
+   "Stock Name": "JK Cement",
+   "CMP": 1257.45,
+   "Reco date": "6/1/20",
+   "Target Price": 1600,
+   "Duration": 12,
+   "Do I Hold It ?": "YES",
+   "Status": "Target Achieved"
+ },
+ {
+   "Stock Name": "Bluestar",
+   "CMP": 839.85,
+   "Reco date": "24/1/20",
+   "Target Price": 920,
+   "Duration": 12,
+   "Do I Hold It ?": "NO",
+   "Status": "Active"
+ },
+ {
+   "Stock Name": "Orient Electric",
+   "CMP": 210,
+   "Reco date": "24/1/20",
+   "Target Price": 240,
+   "Duration": 12,
+   "Do I Hold It ?": "NO",
+   "Status": "Target Achieved"
+ },
+ {
+   "Stock Name": "Birla Cable",
+   "CMP": 114,
+   "Reco date": "7/7/20",
+   "Target Price": 120,
+   "Duration": 12,
+   "Do I Hold It ?": "YES",
+   "Status": "Active"
+ },
+ {
+   "Stock Name": "UPL",
+   "CMP": 543.3,
+   "Reco date": "24/1/20",
+   "Target Price": 800,
+   "Duration": 12,
+   "Do I Hold It ?": "YES",
+   "Status": "Active"
+ }
+]
