@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import { PaginationModule } from 'ngx-pagination-bootstrap';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { PaginationModule } from 'ngx-pagination-bootstrap';
     SocialComponent,
     PortfolioComponent,
     AddStocksPopupComponent,
+    FooterComponent,
     ],
   imports: [
     BrowserModule,
