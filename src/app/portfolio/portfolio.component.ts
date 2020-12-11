@@ -55,10 +55,11 @@ import {AddStocksPopupComponent} from "../add-stocks-popup/add-stocks-popup.comp
 export class PortfolioComponent implements OnInit {
   stockDataList: any = [];
   message:any;
+  p:number = 1; 
 
   constructor(private route1: Router, private stockservice: StockService, private modalService: NgbModal) {
 
-    this.stockservice.refreshobservable.subscribe(item =>{this.stockDataList = item;}
+    this.stockservice.refreshobservable.subscribe(item =>{this.stockDataList = item.reverse();}
       
     )
 
@@ -66,7 +67,8 @@ export class PortfolioComponent implements OnInit {
       .subscribe(
         stocks => {
           console.log(stocks);
-          this.stockDataList = stocks;
+          this.stockDataList = stocks.reverse();
+          
         }
       );
 
@@ -101,7 +103,18 @@ export class PortfolioComponent implements OnInit {
     return prcnt.toFixed(2);
   }
   deleteStock(stockData){
-this.stockservice.deleteStock(stockData._id).subscribe(result=> this.message ="Stock Deleted Successfully");
+this.stockservice.deleteStock(stockData._id).subscribe(result=> {this.message ="Stock Deleted Successfully";
+this.stockservice.getStocks()
+      .subscribe(
+        stocks => {
+          console.log(stocks);
+          this.stockservice.refreshstocklist(stocks);
+          this.message=null;
+        }
+      );
+
+});
+
 
 
   }

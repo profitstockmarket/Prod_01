@@ -7,14 +7,14 @@ app.use(bodyparser.json());
 const Stock = require('./stock.model.js');
 const http=require('http');
 //Copy the Connection code from mongoDB . Used Connect Your Application option in MongoDb dashboard 
-var uri = "mongodb+srv://psm01:1hCdtt72WU2eRh3L@cluster0.pekx3.mongodb.net/masterstock?retryWrites=true&w=majority";
+var uri = "mongodb+srv://psm01:1hCdtt72WU2eRh3L@cluster0.pekx3.mongodb.net/masterstock1?retryWrites=true&w=majority";
 
 mongoose.Promise=global.Promise;
 
 mongoose.connect(uri).then(() => {
 
 console.log('Database Connection successful!!')
-//  initial();
+    // initial();
 
 
 

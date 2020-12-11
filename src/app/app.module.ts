@@ -12,8 +12,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import { PaginationModule } from 'ngx-pagination-bootstrap';
+import {NgxPaginationModule} from 'ngx-pagination';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     NgbModule,
     FormsModule,
-    PaginationModule
+    PaginationModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule
 
   ],
   providers: [],

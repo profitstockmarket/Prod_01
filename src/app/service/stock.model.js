@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { timestamp } = require('rxjs/operators');
 
 const StockSchema = mongoose.Schema({
    stockname: String,
@@ -10,8 +11,8 @@ const StockSchema = mongoose.Schema({
    duration: String ,
    disclaimer: String ,
    sector:String,
-   marketcap:String   
-   
+   marketcap:String,   
+   timestamp:String
   
 
 });

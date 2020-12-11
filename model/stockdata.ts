@@ -12,6 +12,7 @@ export class Stock {
     disclaimer: any;
     sector:any;
     marketcap:any;
+    timestamp:any;
 
     constructor()
     {}
