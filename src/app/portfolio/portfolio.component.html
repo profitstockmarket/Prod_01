@@ -74,9 +74,22 @@
         <!-- <td><span class="table-remove"><button type="button"
 
           class="btn btn-secondary btn-rounded btn-sm my-0">Edit</button></span></td> -->
-        <td><span class="table-remove" (click)='deleteStock(stockData)'><button type="button"
+          <td class="overflow-hidden" >
+            <div ngbDropdown container="body">
+              <button class="btn btn-outline-primary btn-sm" ngbDropdownToggle>Actions</button>
+              <div ngbDropdownMenu>
+                <button ngbDropdownItem>Edit</button>
+                <button ngbDropdownItem>Duplicate</button>
+                <div class="dropdown-divider"></div>
+                <!-- <button ngbDropdownItem (click)='deleteStock(stockData)'>Delete</button> -->
+                <button  ngbDropdownItem   (click)='deleteStock(stockData)'>Delete</button>
+              </div>
+            </div>
+            </td>
+
+        <!-- <td><span class="table-remove" (click)='deleteStock(stockData)'><button type="button"
           class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span></td>
-          
+           -->
            
       </tr>
       

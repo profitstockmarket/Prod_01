@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {LoginComponent} from '../login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +10,14 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private route1:Router) { }
+  
+
+  constructor(private route1:Router, public modalService1: NgbModal) { }
 
   ngOnInit(): void {
   }
+
+  
 
   Portfolio(){
     this.route1.navigate(["Portfolio"]);
@@ -30,8 +36,14 @@ export class HeaderComponent implements OnInit {
         
         }
 
+        login(){
+          this.route1.navigate(["login"]);
+          
+          }
 
-
-
+          open() {
+            const modalRef = this.modalService1.open(LoginComponent);
+            modalRef.componentInstance.name = 'World';
+          }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms'; 
+// import { FormsModule } from '@angular/forms'; 
 import { Stock } from "../../../model/stockdata";
 import { StockService } from '../service/stock.service';
 

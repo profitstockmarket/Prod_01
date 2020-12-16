@@ -1,0 +1,31 @@
+
+
+<div class="container-fluid">
+<div class="modal-header">
+    <h4 class='a1' >Account Login</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    
+  </div>
+  <div class="modal-body">
+          <div class="mb-3">
+        <div class="form-group row">
+  <label>username :</label> <input type="text" class="form-control">
+  <label>Password :</label> <input type="text"  class="form-control">
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary"(click)="ValidateLogin()">
+  Login
+  </button>
+    <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>
+</div>
+
+
+  

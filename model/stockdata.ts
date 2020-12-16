@@ -1,5 +1,4 @@
-//  const mongoose = require('mongoose') 
-
+//  const mongoose = require('mongoose')
 export class Stock {
    _id:string;
     stockname: string;

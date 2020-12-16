@@ -16,6 +16,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FeatureComponent } from './feature/feature.component';
+import { LoginComponent } from './login/login.component';
+
 
 
 @NgModule({
@@ -28,6 +32,10 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter';
     AddStocksPopupComponent,
     HeaderComponent,
     FooterComponent,
+    SidebarComponent,
+    FeatureComponent,
+    LoginComponent,
+    
     ],
   imports: [
     BrowserModule,

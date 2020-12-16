@@ -4,6 +4,9 @@ import { StockAnalysisComponent } from './stock-analysis/stock-analysis.componen
 import { HomepageComponent } from './homepage/homepage.component';
 import { SocialComponent } from './social/social.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { LoginComponent } from './login/login.component';
+ 
+
 
 
 const routes: Routes = [
@@ -12,6 +15,10 @@ const routes: Routes = [
 { path: 'StockAnalysis', component: StockAnalysisComponent },
 { path: 'Portfolio', component: PortfolioComponent },
 { path: 'Social', component: SocialComponent  },
+{ path: 'login', component: SocialComponent  },
+
+
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

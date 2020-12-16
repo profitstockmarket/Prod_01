@@ -97,6 +97,8 @@ export class PortfolioComponent implements OnInit {
     const modalRef = this.modalService.open(AddStocksPopupComponent);
     modalRef.componentInstance.name = 'World';
   }
+
+  
   Cal_prcnt(cmp, targetPrice) {
 
     const prcnt = ((targetPrice - cmp) / cmp)*100;
