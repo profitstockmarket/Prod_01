@@ -12,7 +12,7 @@ const httpOptions = {
 
 export class StockService {
     
-    private url = 'http://localhost:3000/api/stocks';
+    private url = 'http://localhost:8080/api/stocks';
     constructor(private http:HttpClient) {
         
     }

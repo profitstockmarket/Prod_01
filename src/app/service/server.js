@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const bodyparser = require("body-parser");
-
+const path= require('path');
 const app = express();
 app.use(bodyparser.json());
 const Stock = require('./stock.model.js');
 const http=require('http');
-//Copy the Connection code from mongoDB . Used Connect Your Application option in MongoDb dashboard 
+//Copy the Connection code from mongoDB . Used Connect Your Application option in MongoDb dashboard
 var uri = "mongodb+srv://psm01:1hCdtt72WU2eRh3L@cluster0.pekx3.mongodb.net/masterstock1?retryWrites=true&w=majority";
 
 mongoose.Promise=global.Promise;
@@ -29,19 +29,25 @@ console.log('Connection failed!!!',err);
 
 const cors = require('cors');
 const corsOptions = {
-    origin:'http://localhost:4250',
+    // origin:'http://localhost:4250',
+
+    origin:'http://ec2-3-133-79-241.us-east-2.compute.amazonaws.com',
     optionSuccessStatus: 200
 }
 
 app.use(cors(corsOptions))
 
 require('./stock.route.js')(app);
+app.use(express.static(path.join(__dirname,'my-dream-app/index.html')));
+app.get('*',(req,res)=>{
+    res.sendFile(`${path.join(__dirname,'my-dream-app/index.html')}`);
+});
 
-//create a server 
-const port= 3000;
+//create a server
+const port= 8080;
 app.set('port',port);
 // const server = http.createServer(app);
-const server = app.listen(3000,function(){
+const server = app.listen(port,function(){
     let host=server.address().address;
     let port=server.address().port;
     console.log("App listening at ",host,port);
@@ -51,7 +57,7 @@ const server = app.listen(3000,function(){
  app.use(bodyparser.urlencoded({extended:false}));
 
  function initial(){
- 
+
     let stocks = [
         {"stockname":"AMBER ENTERPRISES INDIA LTD","stockcode":"AMBEN","cmp":"2325","recoprice":"2336.57","recodate":"12/04/2020","targetPrice":"","duration":"12","disclaimer":"YES","sector":"","marketcap":""},
         {"stockname":"APOLLO HOSPITALS ENTERPRISES L","stockcode":"APOHOS","cmp":"2361.25","recoprice":"2389.68","recodate":"12/04/2020","targetPrice":"","duration":"12","disclaimer":"YES","sector":"","marketcap":""},
@@ -104,10 +110,10 @@ const server = app.listen(3000,function(){
         {"stockname":"VOLTAS LTD","stockcode":"VOLTAS","cmp":"809.75","recoprice":"598.68","recodate":"12/04/2020","targetPrice":"","duration":"12","disclaimer":"YES","sector":"","marketcap":""},
         {"stockname":"YES BANK LIMITED","stockcode":"YESBAN","cmp":"19.77","recoprice":"15.91","recodate":"12/04/2020","targetPrice":"","duration":"12","disclaimer":"YES","sector":"","marketcap":""}
         ]
-   
+
     // Init data -> save to MongoDB
 
-    for (let i = 0; i < stocks.length; i++) { 
+    for (let i = 0; i < stocks.length; i++) {
         const stock = new Stock(stocks[i]);
         stock.save();
     }

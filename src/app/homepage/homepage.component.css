@@ -114,8 +114,8 @@ cursor: pointer;
   font-size:13px
 }
 .social-icons a{
-  background-color:#eceeef;
-  color:#818a91;
+  background-color:hsl(34, 65%, 51%);
+  color:#ec1818;
   font-size:16px;
   display:inline-block;
   line-height:44px;
