@@ -21,7 +21,7 @@ export class StockAnalysisComponent implements OnInit {
       
       }
       analysis(){
-        this.route1.navigate(["StockAnalysis"]);
+        this.route1.navigate(["stock-analysis"]);
         
         }
         Portfolio(){
