@@ -6,8 +6,9 @@ import {Router} from '@angular/router'
   templateUrl: './social.component.html',
   styleUrls: ['./social.component.css']
 })
+ 
 export class SocialComponent implements OnInit {
-
+   
   constructor(private route1:Router) { }
 
   ngOnInit(): void {
@@ -27,5 +28,7 @@ export class SocialComponent implements OnInit {
         Portfolio(){
           this.route1.navigate(["Portfolio"]);
             }
+
+           
   
 }

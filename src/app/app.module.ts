@@ -19,6 +19,16 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FeatureComponent } from './feature/feature.component';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule}  from '@angular/material/card';
+import {MatButtonModule}  from '@angular/material/button';
+import {MatDividerModule}  from '@angular/material/divider';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { MoComponent } from './mo/mo.component';
+import { Mo2Component } from './mo/mo2/mo2.component';
+import { Mo3Component } from './mo/mo3/mo3.component';
+import { Mo4Component } from './mo/mo4/mo4.component';
+
 
 
 
@@ -35,6 +45,10 @@ import { LoginComponent } from './login/login.component';
     SidebarComponent,
     FeatureComponent,
     LoginComponent,
+    MoComponent,
+    Mo2Component,
+    Mo3Component,
+    Mo4Component,
     
     ],
   imports: [
@@ -45,7 +59,12 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     PaginationModule,
     NgxPaginationModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatGridListModule,
 
   ],
   providers: [],

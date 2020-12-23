@@ -38,9 +38,9 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 require('./stock.route.js')(app);
-app.use(express.static(path.join(__dirname,'my-dream-app/index.html')));
+app.use(express.static(path.join(__dirname,'my-dream-app/dist/my-dream-app/index.html')));
 app.get('*',(req,res)=>{
-    res.sendFile(`${path.join(__dirname,'my-dream-app/index.html')}`);
+    res.sendFile(`${path.join(__dirname,'my-dream-app/dist/my-dream-app/index.html')}`);
 });
 
 //create a server
@@ -48,6 +48,7 @@ const port= 8080;
 app.set('port',port);
 // const server = http.createServer(app);
 const server = app.listen(port,function(){
+    console.log("server ",server.address());
     let host=server.address().address;
     let port=server.address().port;
     console.log("App listening at ",host,port);
