@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-    const stocks=require('../service/stock.controller.js');
+    const stocks=require('./stock.controller.js');
 
    //Create new Stock
    app.post('/api/stocks',stocks.create);

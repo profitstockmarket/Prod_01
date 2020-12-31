@@ -12,13 +12,14 @@ const httpOptions = {
 
 export class StockService {
     
-    private url = 'http://localhost:8080/api/stocks';
+    private url = 'http://profitstockmarket.us-east-2.elasticbeanstalk.com/api/stocks';
+    // private url = 'http://localhost:8080/api/stocks';
     constructor(private http:HttpClient) {
         
     }
 
-    getStocks (): Observable<Stock[]> {
-        return this.http.get<Stock[]>(this.url);
+    getStocks (): Observable<any> {
+        return this.http.get<any>(this.url);
       }
     
     

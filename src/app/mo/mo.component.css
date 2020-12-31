@@ -2,10 +2,24 @@
     min-height: 550px;
     max-width: 450px;
     min-width: 450px;
-    margin: 4px;
+    margin: 12px;
   }
 
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('/assets/Logo/Favicon Logo Ver 2_small-1.png');
     background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 15%;
+    flex-shrink: 0;
+    object-fit: cover;
   }
+ .rightalignedbutton{
+   margin-left: 300px;
+
+  text-align: left;
+
+
+ }
+    
+  

@@ -15,10 +15,7 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
 this.Show_accordionExample =false;
   }
-  alertmsg()
-  {
-    this.Show_accordionExample=!this.Show_accordionExample;
-  }
+
 
 Portfolio(){
 this.route1.navigate(["Portfolio"]);
@@ -31,10 +28,13 @@ this.route1.navigate(["Home"]);
 Social(){
   this.route1.navigate(["Social"]);
   
-  }
-  analysis(){
-    this.route1.navigate(["StockAnalysis"]);
+}
+analysis(){
+  this.route1.navigate(["StockAnalysis"]);
+}
+Mo4(){
+ this.route1.navigate(["Mo4"]);
     
-    }
+}
 
 }

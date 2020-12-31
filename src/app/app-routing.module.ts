@@ -5,6 +5,11 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { SocialComponent } from './social/social.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LoginComponent } from './login/login.component';
+import { MoComponent } from './mo/mo.component';
+import { Mo4Component } from './mo/mo4/mo4.component';
+import { Mo3Component } from './mo/mo3/mo3.component';
+import { Mo2Component } from './mo/mo2/mo2.component';
+
  
 
 
@@ -15,9 +20,11 @@ const routes: Routes = [
 { path: 'StockAnalysis', component: StockAnalysisComponent },
 { path: 'Portfolio', component: PortfolioComponent },
 { path: 'Social', component: SocialComponent  },
-{ path: 'login', component: SocialComponent  },
-
-
+{ path: 'login', component: LoginComponent  },
+{ path: 'Mo4', component: Mo4Component },
+{ path: 'Mo', component: MoComponent },
+{ path: 'Mo3', component: Mo3Component },
+{ path: 'Mo2', component: Mo2Component },
 
 ];
 @NgModule({

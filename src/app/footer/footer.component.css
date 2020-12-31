@@ -1,8 +1,5 @@
 /* Footer */
 
-section {
-    padding: 60px 0;
-}
 
 section .section-title {
     text-align: center;
@@ -70,6 +67,6 @@ section .section-title {
     padding-left: 0;
     border-left: transparent;
     padding-bottom: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 }

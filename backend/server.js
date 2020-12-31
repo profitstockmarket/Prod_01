@@ -29,19 +29,19 @@ console.log('Connection failed!!!',err);
 
 const cors = require('cors');
 const corsOptions = {
-    // origin:'http://localhost:4250',
+    //origin:'http://localhost:4200',
 
-    origin:'http://ec2-3-133-79-241.us-east-2.compute.amazonaws.com',
+    origin:'http://psm-dev-angular.s3-website.us-east-2.amazonaws.com',
     optionSuccessStatus: 200
 }
 
 app.use(cors(corsOptions))
 
 require('./stock.route.js')(app);
-app.use(express.static(path.join(__dirname,'my-dream-app/dist/my-dream-app/index.html')));
-app.get('*',(req,res)=>{
-    res.sendFile(`${path.join(__dirname,'my-dream-app/dist/my-dream-app/index.html')}`);
-});
+// app.use(express.static(path.join(__dirname,'my-dream-app/dist/my-dream-app/index.html')));
+// app.get('*',(req,res)=>{
+//     res.sendFile(`${path.join(__dirname,'my-dream-app/dist/my-dream-app/index.html')}`);
+// });
 
 //create a server
 const port= 8080;

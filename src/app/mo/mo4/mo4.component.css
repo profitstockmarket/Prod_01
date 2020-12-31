@@ -1,0 +1,31 @@
+.example-card {
+    max-width: 90%;
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+#headpic{
+max-height: 400px;
+max-width: 100%;
+
+}
+
+.bodycard{
+max-width: 95%;
+margin: 2%; 
+text-align: left;
+}
+
+.para1{
+font-size: 15px;
+}
+
+#Iml_md_body{
+max-width: 100%;
+}
+
+#Imr_md_body{
+  max-width: 100%;
+}
