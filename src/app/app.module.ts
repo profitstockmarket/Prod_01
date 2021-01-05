@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StockAnalysisComponent } from './stock-analysis/stock-analysis.component';
@@ -28,6 +29,7 @@ import { MoComponent } from './mo/mo.component';
 import { Mo2Component } from './mo/mo2/mo2.component';
 import { Mo3Component } from './mo/mo3/mo3.component';
 import { Mo4Component } from './mo/mo4/mo4.component';
+import { Mo5Component } from './mo5/mo5.component';
 
 
 
@@ -49,10 +51,12 @@ import { Mo4Component } from './mo/mo4/mo4.component';
     Mo2Component,
     Mo3Component,
     Mo4Component,
+    Mo5Component,
     
     ],
   imports: [
     BrowserModule,
+    ChartsModule,
     AppRoutingModule,
     HttpClientModule,
     NgbModule,

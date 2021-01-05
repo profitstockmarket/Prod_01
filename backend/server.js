@@ -29,9 +29,9 @@ console.log('Connection failed!!!',err);
 
 const cors = require('cors');
 const corsOptions = {
-    //origin:'http://localhost:4200',
+    // origin:'http://localhost:4200',
 
-    origin:'http://psm-dev-angular.s3-website.us-east-2.amazonaws.com',
+    origin:'http://profitstockmarket.com',
     optionSuccessStatus: 200
 }
 
