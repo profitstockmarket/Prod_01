@@ -12,8 +12,8 @@ const httpOptions = {
 
 export class StockService {
     
-    private url = 'http://profitstockmarket.us-east-2.elasticbeanstalk.com/api/stocks';
-    // private url = 'http://stockdata.profitstockmarket.com/api/stocks';
+    // private url = 'https://profitstockmarket.us-east-2.elasticbeanstalk.com/api/stocks';
+    private url = 'https://stockdata.profitstockmarket.com/api/stocks';
     // private url = 'http://localhost:8080/api/stocks';
     constructor(private http:HttpClient) {
         
