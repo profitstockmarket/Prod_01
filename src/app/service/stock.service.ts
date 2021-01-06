@@ -50,9 +50,9 @@ export class StockService {
         return this.http.delete<Stock>(url, httpOptions);
       }
     
-    //   updatestock (stock: stock): Observable<any> {
-    //     return this.http.put(this.stocksUrl, stock, httpOptions);
-    //   }
+      updatestock (stock: Stock): Observable<any> {
+        return this.http.put(this.url, stock, httpOptions);
+      }
 
 
 

@@ -32,6 +32,7 @@
   {{message}}
 </div>
 
+<div class="txt">
     <table class="table table-hover">
       <!-- <caption>List of users</caption> -->
       <thead class="thead-dark">
@@ -53,20 +54,21 @@
     </tr>
     </thead>
     <tbody>
-      <tr *ngFor = "let stockData of stockDataList | paginate: { itemsPerPage: 10, currentPage: p }"  >
+       
+              <tr *ngFor = "let stockData of stockDataList | paginate: { itemsPerPage: 10, currentPage: p }"  >
 
         <td>{{stockData.stockname}} </td>
         <td>{{stockData.stockcode}} </td>
-        <td class="has-text-align-center" data-align="center">{{stockData.cmp}}</td>
+        <td class="has-text-align-right" data-align="center">{{stockData.cmp}}</td>
         <td class="has-text-align-center" data-align="center">{{stockData.recodate}}</td>
-        <td class="has-text-align-center" data-align="center">{{stockData.recoprice}}</td>
-        <td class="has-text-align-center" data-align="center">{{stockData.targetPrice}} </td>
-        <td class="has-text-align-center" data-align="center" >{{Cal_prcnt(stockData.cmp, stockData.targetPrice)}} % </td>
+        <td class="has-text-align-right" data-align="center">{{stockData.recoprice}}</td>
+        <td class="has-text-align-right" data-align="center">{{stockData.targetPrice}} </td>
+        <td class="has-text-align-right" data-align="center" >{{Cal_prcnt(stockData.cmp, stockData.targetPrice)}} % </td>
         <td class="has-text-align-center" data-align="center">{{stockData.duration}}</td>
-        <td class="has-text-align-center" data-align="center">{{stockData.disclaimer}}</td>
+        <td class="has-text-align-left" data-align="center">{{stockData.disclaimer}}</td>
         <td class="has-text-align-center" data-align="center" [ngClass]= "{Row_TargetAchieved : stockData.cmp >= stockData.targetPrice}" >ACTIVE </td>
-        <td class="has-text-align-center" data-align="center">{{stockData.sector}}</td>
-        <td class="has-text-align-center" data-align="center">{{stockData.marketcap}}</td>
+        <td class="has-text-align-left" data-align="center">{{stockData.sector}}</td>
+        <td class="has-text-align-left" data-align="center">{{stockData.marketcap}}</td>
         <!-- <td><span class="table-remove"><button type="button"
 
           class="btn btn-secondary btn-rounded btn-sm my-0">Edit</button></span></td> -->
@@ -74,7 +76,7 @@
             <div ngbDropdown container="body">
               <button class="btn btn-outline-primary btn-sm" ngbDropdownToggle>Actions</button>
               <div ngbDropdownMenu>
-                <button ngbDropdownItem>Edit</button>
+                <button ngbDropdownItem >Edit</button>
                 <button ngbDropdownItem>Duplicate</button>
                 <div class="dropdown-divider"></div>
                 <!-- <button ngbDropdownItem (click)='deleteStock(stockData)'>Delete</button> -->
@@ -83,21 +85,18 @@
             </div>
             </td>
 
-        <!-- <td><span class="table-remove" (click)='deleteStock(stockData)'><button type="button"
-          class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span></td>
-           -->
+        
            
       </tr>
       
   </table>
 
+</div>
+
 
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
   
-  <!-- <ng-pagination [position]="'center'" [pageSize]="1" [itemsCount]="stockDataList.length" [data]="5" ></ng-pagination>   -->
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  
 
 
