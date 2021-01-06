@@ -6,6 +6,8 @@ const app = express();
 app.use(bodyparser.json());
 const Stock = require('./stock.model.js');
 const http=require('http');
+var https=require('https');
+
 //Copy the Connection code from mongoDB . Used Connect Your Application option in MongoDb dashboard
 var uri = "mongodb+srv://psm01:1hCdtt72WU2eRh3L@cluster0.pekx3.mongodb.net/masterstock1?retryWrites=true&w=majority";
 
@@ -44,7 +46,10 @@ require('./stock.route.js')(app);
 // });
 
 //create a server
-const port= 8080;
+const {port= 8080}= process.env;
+console.log('PORT is ', port)
+
+
 app.set('port',port);
 // const server = http.createServer(app);
 const server = app.listen(port,function(){
