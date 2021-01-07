@@ -1,24 +1,44 @@
+#headpic{
+  margin-top: 1px;
+  margin-bottom: 10px;
+  max-height: 40%;
+  width:100%;
+  vertical-align: middle  ;
+  
+  }
+  
+.card-body{
+max-width: 100%;
+  }  
 
-#mediaimage{
-padding-left: 25px;
-padding-right: 25px; 
-height: 150px;
-width: 200px;
-}
-.media-body{
-padding-top: 25     px;    
-padding-bottom: 25px;    
-background-color: whitesmoke    ;
-margin-left: 15px;
-margin-right: 30px;
-}
-.media{
-padding-top: 20px;
-padding-bottom: 20px;;
-background-color: #CFD8DC;
-}
-p{
-margin-left: 30px;
-margin-right: 30px;
+#img1{
+height: 100px;
+width: auto;
+vertical-align: middle;
+border: black;
+border-width: 2px;
+margin: 5px;
+ 
 
-}
+  }
+  #img2{
+    height: 40px;
+    width: auto;
+  
+    
+      }
+.para2{
+display: inline-block;
+margin-right: 10px;
+text-justify: newspaper;
+display: inline;
+
+      }
+      #Iml_md_body{
+        max-width: 100%;
+        }
+        
+        #Imr_md_body{
+          max-width: 100%;
+        }
+        
