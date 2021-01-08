@@ -1,7 +1,7 @@
 .example-card {
-    min-height: 550px;
-    max-width: 450px;
-    min-width: 450px;
+    min-height: auto;
+    width: auto;
+    /* min-width: 450px; */
     margin: 12px;
   }
 
@@ -21,5 +21,7 @@
 
 
  }
-    
-  
+.card-image{
+max-height: 220px;
+
+}
