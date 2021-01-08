@@ -15,7 +15,7 @@
   <img id="headpic" src="/assets/SA_1.jpg ">
 
 
-  <div class="container">
+  <div>
     <div class="card">
 
       <div class="card-header ">
@@ -160,7 +160,7 @@
 
 
 
-  <div class="container">
+  
     <div class="card">
 
       <div class="card-header ">
@@ -233,9 +233,9 @@
           of 100 resulting 20% appreciation approximately in the share price in next 2 to 3 quarters.</p>
       </div>
     </div>
-  </div>
+  
 
-  <div class="container">
+  
     <div class="card">
       <div class="card-header ">
         <div class="clearfix">
@@ -285,9 +285,9 @@
           of 100 resulting 20% appreciation approximately in the share price in next 2 to 3 quarters.</p>
       </div>
     </div>
-  </div>
+  
 
-  <div class="container">
+  
     <div class="card">
       <div class="card-header ">
         <div class="clearfix">
@@ -316,7 +316,8 @@
           2020 </p>
       </div>
     </div>
-  </div>
+  
+
 
 
 <!-- boiler plate code  -->
@@ -341,7 +342,7 @@
 
 
 
-  <div class='container-fluid'>
+  <div>
     <ngb-accordion #acc="ngbAccordion">
       <ngb-panel id="toggle-1" title="Rating Definition">
         <ng-template ngbPanelContent>
@@ -355,7 +356,7 @@
           Stocks are suggested based on stock’s parameter analysis and comparison with peers.
         </ng-template>
       </ngb-panel>
-      <ngb-panel id="toggle-2" title="Disclosure:">
+      <ngb-panel id="toggle-2" title="Disclosure">
         <ng-template ngbPanelContent>
           I Shashi Raghuvansh Shekhar, B.Tech, author, hereby certify that all of the views expressed in this research report
           accurately reflect my views about the subject issuer(s) or securities. I also certify that the views is
@@ -365,7 +366,7 @@
           than 1 % of recommended stock.
         </ng-template>
       </ngb-panel>
-      <ngb-panel id="toggle-3" title="Disclaimer:">
+      <ngb-panel id="toggle-3" title="Disclaimer">
         <ng-template ngbPanelContent>
           This report has been prepared by Shashi Raghuvansh Shekhar of ProfitStockMarket.com, and is solely for information of
           the recipient only. The report must not be used as a singular basis of any investment decision.
@@ -384,14 +385,23 @@
       </ngb-panel>
     </ngb-accordion>
 
-    <hr />
-
+    
+<div style="margin: 8px;">
     <button class="btn btn-sm btn-outline-primary mr-2" (click)="acc.toggle('toggle-1')">Rating Definition</button>
     <button class="btn btn-sm btn-outline-primary mr-2" (click)="acc.toggle('toggle-2')">Disclosure</button>
-    <button class="btn btn-sm btn-outline-primary mr-2" (click)="acc.toggle('toggle-3')">disclaimer</button>
-
+    <button class="btn btn-sm btn-outline-primary mr-2" (click)="acc.toggle('toggle-3')">Disclaimer</button>
+</div>
   </div>
-
+  
+  <div (click)="scrollToTop()" class="scroll-to-top" *ngIf="pageYoffset > 5" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" 
+    class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 
+      0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0
+       0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+    </svg>
+    
+ </div>
 
 
 </body>

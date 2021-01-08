@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { ChartType,ChartDataSets, ChartOptions, pluginService} from 'chart.js';
-import { Color, Label,SingleDataSet, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
+import { ViewportScroller } from '@angular/common';
+import { ChartType, ChartDataSets, ChartOptions, pluginService } from 'chart.js';
+import { Color, Label, SingleDataSet, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
 
 @Component({
   selector: 'app-stock-analysis',
@@ -9,11 +10,16 @@ import { Color, Label,SingleDataSet, monkeyPatchChartJsLegend, monkeyPatchChartJ
   styleUrls: ['./stock-analysis.component.css']
 })
 export class StockAnalysisComponent implements OnInit {
+
+  pageYoffset = 0;
+  @HostListener('window:scroll', ['$event']) onScroll(event) {
+    this.pageYoffset = window.pageYOffset;
+  }
   public lineChartData: ChartDataSets[] = [
-    { data: [49.90, 87.69, 97.66, 80.44, 76.47, 90.30, 98.90,80.92,87.51,201.47], label: 'EPS' },
+    { data: [49.90, 87.69, 97.66, 80.44, 76.47, 90.30, 98.90, 80.92, 87.51, 201.47], label: 'EPS' },
   ];
   public lineChartLabels: Label[] = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
-  public lineChartOptions: (ChartOptions & { annotation ?: any }) = {
+  public lineChartOptions: (ChartOptions & { annotation?: any }) = {
     responsive: true,
   };
   public lineChartColors: Color[] = [
@@ -28,65 +34,68 @@ export class StockAnalysisComponent implements OnInit {
 
 
   // Pie
-public pieChartOptions: ChartOptions = {
-  responsive: true,
-  legend: {
-    position: 'right',
-  },
-  plugins: {
-    datalabels: {
-      formatter: (value, ctx) => {
-        const label = ctx.chart.data.labels[ctx.dataIndex];
-        return label;
-      },
+  public pieChartOptions: ChartOptions = {
+    responsive: true,
+    legend: {
+      position: 'right',
     },
-  }
-};
+    plugins: {
+      datalabels: {
+        formatter: (value, ctx) => {
+          const label = ctx.chart.data.labels[ctx.dataIndex];
+          return label;
+        },
+      },
+    }
+  };
 
-public pieChartLabels: Label[] = [['Promotor', 'Group'], ['FII ',], ['Retail'],'Mutual Funds'];
-public pieChartData: SingleDataSet = [59.91, 15, 10,10];
-public pieChartType: ChartType = 'pie';
-public pieChartLegend = true;
-public pieChartPlugins = [pluginService];
+  public pieChartLabels: Label[] = [['Promotor', 'Group'], ['FII ',], ['Retail'], 'Mutual Funds'];
+  public pieChartData: SingleDataSet = [59.91, 15, 10, 10];
+  public pieChartType: ChartType = 'pie';
+  public pieChartLegend = true;
+  public pieChartPlugins = [pluginService];
 
-public barChartOptions: ChartOptions = {
-  responsive: true,
-};
-public barChartLabels: Label[] = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
-public barChartType: ChartType = 'bar';
-public barChartLegend = true;
-public barChartPlugins = [];
+  public barChartOptions: ChartOptions = {
+    responsive: true,
+  };
+  public barChartLabels: Label[] = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
+  public barChartType: ChartType = 'bar';
+  public barChartLegend = true;
+  public barChartPlugins = [];
 
-public barChartData: ChartDataSets[] = [
-  { data: [49.90, 87.69, 97.66, 80.44, 76.47, 90.30, 98.90,80.92,87.51,201.47], label: 'EPS' }
- 
-];
+  public barChartData: ChartDataSets[] = [
+    { data: [49.90, 87.69, 97.66, 80.44, 76.47, 90.30, 98.90, 80.92, 87.51, 201.47], label: 'EPS' }
 
-  constructor(private route1:Router) {
+  ];
+
+  constructor(private route1: Router, private scroll: ViewportScroller) {
     monkeyPatchChartJsTooltip();
     monkeyPatchChartJsLegend();
-   }
+  }
 
 
 
   ngOnInit(): void {
   }
-  Home(){
+  Home() {
     this.route1.navigate(["Homepage"]);
-    
-    }
-    Social(){
-      this.route1.navigate(["Social"]);
-      
-      }
-      analysis(){
-        this.route1.navigate(["stock-analysis"]);
-        
-        }
-        Portfolio(){
-          this.route1.navigate(["Portfolio"]);
-            }
-  
+
+  }
+  Social() {
+    this.route1.navigate(["Social"]);
+
+  }
+  analysis() {
+    this.route1.navigate(["stock-analysis"]);
+
+  }
+  Portfolio() {
+    this.route1.navigate(["Portfolio"]);
+  }
+  scrollToTop() {
+    this.scroll.scrollToPosition([500, 0]);
+  }
+
 
 }
 

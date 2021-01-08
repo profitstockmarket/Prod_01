@@ -1,44 +1,54 @@
-#headpic{
+.card {
+margin: 4px;
+
+}
+
+#headpic {
   margin-top: 1px;
   margin-bottom: 10px;
   max-height: 40%;
-  width:100%;
-  vertical-align: middle  ;
-  
-  }
-  
-.card-body{
-max-width: 100%;
-  }  
+  width: 100%;
+  vertical-align: middle;
+}
 
-#img1{
-height: 100px;
-width: auto;
-vertical-align: middle;
-border: black;
-border-width: 2px;
-margin: 5px;
- 
+.card-body {
+  max-width: 100%;
+}
 
-  }
-  #img2{
-    height: 40px;
-    width: auto;
-  
-    
-      }
-.para2{
-display: inline-block;
-margin-right: 10px;
-text-justify: newspaper;
-display: inline;
+#img1 {
+  height: 100px;
+  width: auto;
+  vertical-align: middle;
+  border: black;
+  border-width: 2px;
+  margin: 5px;
+}
 
-      }
-      #Iml_md_body{
-        max-width: 100%;
-        }
-        
-        #Imr_md_body{
-          max-width: 100%;
-        }
-        
+#img2 {
+  height: 40px;
+  width: auto;
+}
+
+.para2 {
+  display: inline-block;
+  margin-right: 10px;
+  text-justify: newspaper;
+  display: inline;
+}
+
+#Iml_md_body {
+  max-width: 100%;
+}
+
+#Imr_md_body {
+  max-width: 100%;
+}
+
+.scroll-to-top {
+  position: fixed;
+  /* background: red; */
+  bottom: 1px;
+  right: 1px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}

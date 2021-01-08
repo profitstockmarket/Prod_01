@@ -53,6 +53,7 @@ import { Mo5Component } from './mo5/mo5.component';
     Mo4Component,
     Mo5Component,
     
+    
     ],
   imports: [
     BrowserModule,
