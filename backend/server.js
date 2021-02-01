@@ -3,8 +3,13 @@ const express = require("express");
 const bodyparser = require("body-parser");
 const path= require('path');
 const app = express();
+// const app2 = express();
+// const app3 = express();
 app.use(bodyparser.json());
+// app3.use(bodyparser.json());
 const Stock = require('./stock.model.js');
+const Customer = require('./customer.model.js');
+const Profitquery = require('./profitquery.model.js');
 const http=require('http');
 var https=require('https');
 
@@ -16,41 +21,38 @@ mongoose.Promise=global.Promise;
 mongoose.connect(uri).then(() => {
 
 console.log('Database Connection successful!!')
+
+
     // initial();
-
-
-
+    //    initial2();
+       initial3();
 
 })
 .catch(err  => {
 console.log('Connection failed!!!',err);
 });
 
-
-//Handles CORS issue . reference was taken from https://grokonez.com/frontend/angular/angular-6/angular-6-httpclient-get-post-put-delete-node-js-express-restapis-with-mongoose-crud-mongodb
-
-const cors = require('cors');
-const corsOptions = {
-    // origin:'http://localhost:4250',
-
-    origin:'https://profitstockmarket.com',
+//mention the origin to handle CORS issue 
+const cors = require('cors'); 
+const { Module } = require("module"); 
+const corsOptions = { 
+    origin:'http://localhost:4200', 
+// origin:'https://profitstockmarket.com',
     optionSuccessStatus: 200
 }
-
 app.use(cors(corsOptions))
 
 require('./stock.route.js')(app);
-// app.use(express.static(path.join(__dirname,'my-dream-app/dist/my-dream-app/index.html')));
-// app.get('*',(req,res)=>{
-//     res.sendFile(`${path.join(__dirname,'my-dream-app/dist/my-dream-app/index.html')}`);
-// });
+// require('./customer.route.js')(app2);
+// require('./profitquery.route.js')(app3);
 
-//create a server
+//hardcode the port for node server to start listening to 
 const {port= 8080}= process.env;
 console.log('PORT is ', port)
 
 
 app.set('port',port);
+ 
 // const server = http.createServer(app);
 const server = app.listen(port,function(){
     console.log("server ",server.address());
@@ -58,6 +60,7 @@ const server = app.listen(port,function(){
     let port=server.address().port;
     console.log("App listening at ",host,port);
 })
+
 // server.listen(port);
  app.use(bodyparser.json());
  app.use(bodyparser.urlencoded({extended:false}));
@@ -125,4 +128,69 @@ const server = app.listen(port,function(){
     }
 
     console.log(">>> Done - Initial Data!");
+}
+function initial2(){
+ 
+    let customers = [
+      {
+        firstname: "Joe",
+        lastname: "Thomas",
+        emailid: "test@hotmail.com",
+        dob:"march",
+        password:"password1",
+        field1: "field1",
+        field2: "field2",
+        field3: "field3",
+        field4: "field4",
+        field5: "field5",
+
+      },
+      {
+        firstname: "Peter",
+        lastname: "Smith",
+        emailid: "test@hotmail.com",
+        dob:"march",
+        password:"password1",
+        field1: "field1",
+        field2: "field2",
+        field3: "field3",
+        field4: "field4",
+        field5: "field5",
+         
+      },
+      
+    ]
+   
+    // Init data -> save to MongoDB
+ 
+    for (let i = 0; i < customers.length; i++) { 
+        const customer = new Customer(customers[i]);
+        console.log("data is",i )
+        customer.save();
+    }
+ 
+    console.log(">>> Done - Initial Data!");
+}
+function initial3(){
+ 
+    let profitquerys = [
+      {
+        name: "Joea",
+        emailid: "shekhar259@gmail.com",
+        query:"march",
+        response:"password1",
+        date: "field1",
+     },
+           
+    ]
+   
+    // Init data -> save to MongoDB
+ 
+    for (let i = 0; i < profitquerys.length; i++) { 
+        const profitquery = new Profitquery(profitquerys[i]);
+        console.log("data is",i )
+        profitquery.save();
+    }
+ 
+    console.log(">>> Done - Initial profitquery Data!");
 }

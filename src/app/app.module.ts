@@ -30,6 +30,8 @@ import { Mo2Component } from './mo/mo2/mo2.component';
 import { Mo3Component } from './mo/mo3/mo3.component';
 import { Mo4Component } from './mo/mo4/mo4.component';
 import { Mo5Component } from './mo5/mo5.component';
+import { ProfitQueryComponent } from './profit-query/profit-query.component';
+import { RegisternewComponent } from './registernew/registernew.component';
 
 
 
@@ -52,6 +54,8 @@ import { Mo5Component } from './mo5/mo5.component';
     Mo3Component,
     Mo4Component,
     Mo5Component,
+    ProfitQueryComponent,
+    RegisternewComponent,
     
     
     ],

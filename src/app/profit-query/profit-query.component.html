@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="alert alert-success" role="alert" > This is a Beta Version . </div>
+  <div class="container" style="border: 1px solid grey; margin-top: 10px; margin-bottom: 20px;">
+    <h2>Ask Your Query </h2>
+
+    <form (ngSubmit)="onSubmit(); f.reset()" #f="ngForm">
+      <div class="form-group">
+
+        <div class="form-floating mb-3">
+          <!-- <label>Name :</label> -->
+          <input type="text" class="form-control" [(ngModel)]="name" name="name" #namefield="ngModel" minlength="4" maxlength="30" required placeholder="Your Name">
+
+          <div *ngIf="!namefield.valid && namefield.touched " class="alert alert-danger">Namefield is mandatory. Alteast 4 characters
+
+          </div>
+
+        </div>
+
+
+        <div>
+          <!-- <label>Email :</label> -->
+          <input type="text" class="form-control" [(ngModel)]="emailid" name="emailid" required placeholder="e-mail" email #email="ngModel"
+            style="margin-top: 5px; margin-bottom: 5px;">
+
+          <div *ngIf="!email.valid && email.touched" class="alert alert-danger"> Valid Email id is required </div>
+
+        </div>
+
+
+        <div class="form-floating">
+          <label for="floatingTextarea">Your Query</label>
+          <textarea id="floatingTextarea" class="form-control" [(ngModel)]="query" name="query" #f1 required rows="3"
+            minlength="20" maxlength="300" aria-label="With textarea" style="background-color: khaki;"
+            placeholder="Leave a comment here in atleast 20 characters">
+            </textarea>
+
+
+        </div>
+
+        <div class="form-row__description" style="text-align: right;">
+          You have {{300- f1.value.length }} characters remaining
+        </div>
+
+
+        <button type="button" class="btn btn-primary" type="submit" (click)="AddQuery()">Submit Query</button>
+
+        <span><button type="button" class="btn btn-danger" (click) = "f.reset()" >Cancel </button></span>        
+
+      </div>
+    </form>
+
+
+
+
+  </div>
+
+  <div class=container style="border: solid lightcoral;margin-top: 4px; margin-bottom: 4px; ">
+    <h2>All Query Responses  </h2>
+
+
+    <div class="mat-card"
+    *ngFor = "let profitquery of profitqueryDataList ">
+      <div>
+        <label for="">name</label>
+        {{profitquery.name}}
+      </div>
+      <div>
+        
+        {{profitquery.timestamp}}
+      </div>
+      <div class="card" style="background-color: khaki;">
+                {{profitquery.query}}
+      </div>
+      <div style="background-color: lightcyan;">
+        
+        {{ "QueryResponse:" +  profitquery.response}}
+      </div>
+
+
+
+    </div>
+
+    
+
+
+
+
+  </div>
+
+
+
+</body>
+
+</html>

@@ -33,11 +33,16 @@
 
 
 
-<label>Stock Code :</label> <input type="text" class="form-control" [(ngModel)] = "stockcode">
-<label>CMP:</label> <input type="text"  class="form-control" [(ngModel)] = "cmp">
-<label>Reco date :</label> <input type="date"  class="form-control" [(ngModel)] = "recodate">
-<label>Reco Price :</label> <input type="number"  class="form-control" [(ngModel)] = "recoprice">
-<label>Target Price :</label> <input type="number" class="form-control"  [(ngModel)] = "targetPrice">
+<label>Stock Code :</label> 
+<input type="text" class="form-control" [(ngModel)] = "stockcode">
+<label>CMP:</label> 
+<input type="text"  class="form-control" [(ngModel)] = "cmp">
+<label>Reco date :</label> 
+<input type="date"  class="form-control" [(ngModel)] = "recodate">
+<label>Reco Price :</label>
+<input type="number"  class="form-control" [(ngModel)] = "recoprice">
+<label>Target Price :</label>
+<input type="number" class="form-control"  [(ngModel)] = "targetPrice">
 <label>Duration :</label> <input type="number"  class="form-control"  [(ngModel)] = "duration">
 
 <label>Do I Hold : </label>
@@ -67,8 +72,6 @@
 </div>
 
 <div class="modal-footer">
-<button type="button" class="btn btn-primary"(click)="AddStock()">
-Add
-</button>
-  <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Close</button>
+<button type="button" class="btn btn-primary"(click)="AddStock()">Add</button>
+<button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Close</button>
 </div>

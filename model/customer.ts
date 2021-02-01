@@ -1,7 +1,7 @@
 import { EmailValidator } from '@angular/forms';
 
 //  const mongoose = require('mongoose')
-export class customerdb {
+export class Customer {
     _id:string;
      firstname: string;
      lastname: any ;

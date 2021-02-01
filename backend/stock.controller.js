@@ -1,17 +1,5 @@
-//we don’t need to write CRUD functions, Mongoose Model supports all of them:
-//create a new Stock: object.save()
-//find a Stock by id: findById(id)
-//retrieve all Stocks: find()
-//update a Stock by id: findByIdAndUpdate(id, data)
-//remove a Stock: findByIdAndRemove(id)
-//remove all Stocks: deleteMany()
-//find all Stocks by title: find({ title: { $regex: new RegExp(title), $options: “i” } })
-//These functions will be used in our Controller.
-//Create the Controller Inside app/controllers folder, let’s create Stock.controller.js with these CRUD functions:
-//create,findAll,findOne,update,delete,deleteAll,findAllPublished
-//=================================================================================================================================
-
-const Stock= require('./stock.model.js');  //This is the DB model which is required for Stock portfolio 
+//This is the DB model which is required for Stock portfolio
+const Stock= require('./stock.model.js');   
 
 // Create and Save a new Stock
 exports.create = (req,res) => {

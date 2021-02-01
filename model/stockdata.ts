@@ -5,8 +5,8 @@ export class Stock {
     stockcode;
     cmp: any ; 
     recodate: any;
-    recoprice:any;
-    targetPrice: any;
+    recoprice:number;
+    targetPrice: number;
     duration: any;
     disclaimer: any;
     sector:any;
