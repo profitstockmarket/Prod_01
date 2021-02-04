@@ -25,7 +25,7 @@ console.log('Database Connection successful!!')
 
     // initial();
     //    initial2();
-       initial3();
+    //    initial3();
 
 })
 .catch(err  => {

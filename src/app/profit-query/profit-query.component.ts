@@ -53,7 +53,7 @@ export class ProfitQueryComponent implements OnInit {
     var yyyy = today.getFullYear();
     var time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
     this.date = yyyy + '-' + mm + '-' + dd;
-    this.timestamp = this.date + "T" + time + "Z";
+    this.timestamp = this.date + "@" + time + "Local";
 
   }
 
@@ -64,7 +64,7 @@ export class ProfitQueryComponent implements OnInit {
 onSubmit(){
 console.log(this.queryform);
 this.queryform.resetForm();
-alert("Message : Query is Submitted Successfully.Your query will be screened and responded by ProfitStockmarket within 48 Hrs on this page");
+alert("Message : Query is Submitted Successfully.Your query will be screened and responded by ProfitStockmarket within 24 Hrs on this page");
 }
 
   

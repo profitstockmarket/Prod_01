@@ -9,8 +9,13 @@
 
 <body>
   <div class="alert alert-success" role="alert" > This is a Beta Version . </div>
-  <div class="container" style="border: 1px solid grey; margin-top: 10px; margin-bottom: 20px;">
-    <h2>Ask Your Query </h2>
+  <div class="mat-card" style="border: 1px solid grey; margin-top: 10px; margin-bottom: 20px;">
+    <mat-toolbar color="primary">
+      <span>Ask Your Query</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar>
+    
 
     <form (ngSubmit)="onSubmit(); f.reset()" #f="ngForm">
       <div class="form-group">
@@ -28,7 +33,7 @@
 
         <div>
           <!-- <label>Email :</label> -->
-          <input type="text" class="form-control" [(ngModel)]="emailid" name="emailid" required placeholder="e-mail" email #email="ngModel"
+          <input type="text" class="form-control" [(ngModel)]="emailid" name="emailid" required placeholder="E-mail" email #email="ngModel"
             style="margin-top: 5px; margin-bottom: 5px;">
 
           <div *ngIf="!email.valid && email.touched" class="alert alert-danger"> Valid Email id is required </div>
@@ -40,7 +45,7 @@
           <label for="floatingTextarea">Your Query</label>
           <textarea id="floatingTextarea" class="form-control" [(ngModel)]="query" name="query" #f1 required rows="3"
             minlength="20" maxlength="300" aria-label="With textarea" style="background-color: khaki;"
-            placeholder="Leave a comment here in atleast 20 characters">
+            placeholder="Leave a comment here in atleast 20 characters" required>
             </textarea>
 
 
@@ -51,7 +56,7 @@
         </div>
 
 
-        <button type="button" class="btn btn-primary" type="submit" (click)="AddQuery()">Submit Query</button>
+        <button  class="btn btn-primary" type="submit"  [disabled]="!f.valid" (click)="AddQuery()" >Submit Query</button>
 
         <span><button type="button" class="btn btn-danger" (click) = "f.reset()" >Cancel </button></span>        
 
@@ -63,38 +68,62 @@
 
   </div>
 
-  <div class=container style="border: solid lightcoral;margin-top: 4px; margin-bottom: 4px; ">
-    <h2>All Query Responses  </h2>
+  <div style="background-color: burlywood;"></div>
+    
 
-
-    <div class="mat-card"
+<!-- <div class="container" style="border: 1px solid grey; margin-top: 10px; margin-bottom: 20px;"> -->
+  
+  
+    <mat-toolbar color="primary">
+      <span>All Queries</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar>
+  
+  
+  
+  <div class="mat-card" style="background-color: #C5CAE9;"
+    
     *ngFor = "let profitquery of profitqueryDataList ">
-      <div>
-        <label for="">name</label>
-        {{profitquery.name}}
-      </div>
-      <div>
+    
+    <div>
+      <mat-card-subtitle>  
+        <!-- <label for="">Name: </label> -->
+        <a>{{profitquery.name}} 
+          {{profitquery.timestamp}} </a>
         
-        {{profitquery.timestamp}}
+      </mat-card-subtitle>    
       </div>
-      <div class="card" style="background-color: khaki;">
-                {{profitquery.query}}
+    
+      
+
+      <div class="mat-card" >
+        <mat-icon color="primary" style="padding-top: 5px;"> feedback</mat-icon>
+        <mat-card-content>
+        <a>{{profitquery.query}}</a>
+      </mat-card-content>
+      <mat-divider></mat-divider>
       </div>
-      <div style="background-color: lightcyan;">
-        
-        {{ "QueryResponse:" +  profitquery.response}}
+      <div class ="mat-card" style="margin-bottom: 1rem;">
+        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" >
+          <mat-icon color="accent">speaker_notes</mat-icon>
+        </button>
+        <!-- <mat-icon color="warn">speaker_notes</mat-icon> -->
+        <mat-card-content>
+        {{ profitquery.response}}
+      </mat-card-content>
       </div>
 
 
 
     </div>
 
-    
+  <!-- </div> -->
 
 
 
 
-  </div>
+  <!-- </div> -->
 
 
 

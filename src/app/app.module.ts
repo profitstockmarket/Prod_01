@@ -25,6 +25,8 @@ import {MatCardModule}  from '@angular/material/card';
 import {MatButtonModule}  from '@angular/material/button';
 import {MatDividerModule}  from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { MoComponent } from './mo/mo.component';
 import { Mo2Component } from './mo/mo2/mo2.component';
 import { Mo3Component } from './mo/mo3/mo3.component';
@@ -74,6 +76,8 @@ import { RegisternewComponent } from './registernew/registernew.component';
     MatButtonModule,
     MatDividerModule,
     MatGridListModule,
+    MatToolbarModule,
+    MatIconModule,
 
   ],
   providers: [],
