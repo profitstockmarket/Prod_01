@@ -44,6 +44,10 @@ export class HeaderComponent implements OnInit {
     this.route1.navigate(["profitquery"]);
 
   }
+  aboutus() {
+    this.route1.navigate(["aboutus"]);
+
+  }
 
   open() {
     const modalRef = this.modalService1.open(LoginComponent);

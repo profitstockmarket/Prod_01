@@ -27,6 +27,9 @@ import {MatDividerModule}  from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { MoComponent } from './mo/mo.component';
 import { Mo2Component } from './mo/mo2/mo2.component';
 import { Mo3Component } from './mo/mo3/mo3.component';
@@ -34,6 +37,7 @@ import { Mo4Component } from './mo/mo4/mo4.component';
 import { Mo5Component } from './mo5/mo5.component';
 import { ProfitQueryComponent } from './profit-query/profit-query.component';
 import { RegisternewComponent } from './registernew/registernew.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 
@@ -58,6 +62,7 @@ import { RegisternewComponent } from './registernew/registernew.component';
     Mo5Component,
     ProfitQueryComponent,
     RegisternewComponent,
+    AboutusComponent,
     
     
     ],
@@ -78,6 +83,9 @@ import { RegisternewComponent } from './registernew/registernew.component';
     MatGridListModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
+    MatProgressBarModule,
+    MatExpansionModule,
 
   ],
   providers: [],

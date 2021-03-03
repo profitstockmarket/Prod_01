@@ -8,23 +8,25 @@
 </head>
 
 <body>
-  <div class="alert alert-success" role="alert" > This is a Beta Version . </div>
   <div class="mat-card" style="border: 1px solid grey; margin-top: 10px; margin-bottom: 20px;">
     <mat-toolbar color="primary">
       <span>Ask Your Query</span>
       <span class="example-spacer"></span>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user
+      </mat-icon>
     </mat-toolbar>
-    
+
 
     <form (ngSubmit)="onSubmit(); f.reset()" #f="ngForm">
       <div class="form-group">
 
         <div class="form-floating mb-3">
           <!-- <label>Name :</label> -->
-          <input type="text" class="form-control" [(ngModel)]="name" name="name" #namefield="ngModel" minlength="4" maxlength="30" required placeholder="Your Name">
+          <input type="text" class="form-control" [(ngModel)]="name" name="name" #namefield="ngModel" minlength="4"
+            maxlength="30" required placeholder="Your Name">
 
-          <div *ngIf="!namefield.valid && namefield.touched " class="alert alert-danger">Namefield is mandatory. Alteast 4 characters
+          <div *ngIf="!namefield.valid && namefield.touched " class="alert alert-danger">Namefield is mandatory. Alteast
+            4 characters
 
           </div>
 
@@ -33,8 +35,8 @@
 
         <div>
           <!-- <label>Email :</label> -->
-          <input type="text" class="form-control" [(ngModel)]="emailid" name="emailid" required placeholder="E-mail" email #email="ngModel"
-            style="margin-top: 5px; margin-bottom: 5px;">
+          <input type="text" class="form-control" [(ngModel)]="emailid" name="emailid" required placeholder="E-mail"
+            email #email="ngModel" style="margin-top: 5px; margin-bottom: 5px;">
 
           <div *ngIf="!email.valid && email.touched" class="alert alert-danger"> Valid Email id is required </div>
 
@@ -56,9 +58,9 @@
         </div>
 
 
-        <button  class="btn btn-primary" type="submit"  [disabled]="!f.valid" (click)="AddQuery()" >Submit Query</button>
+        <button class="btn btn-primary" type="submit" [disabled]="!f.valid" (click)="AddQuery()">Submit Query</button>
 
-        <span><button type="button" class="btn btn-danger" (click) = "f.reset()" >Cancel </button></span>        
+        <span><button type="button" class="btn btn-danger" (click)="f.reset()">Cancel </button></span>
 
       </div>
     </form>
@@ -69,54 +71,52 @@
   </div>
 
   <div style="background-color: burlywood;"></div>
-    
 
-<!-- <div class="container" style="border: 1px solid grey; margin-top: 10px; margin-bottom: 20px;"> -->
-  
-  
-    <mat-toolbar color="primary">
-      <span>All Queries</span>
-      <span class="example-spacer"></span>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-    </mat-toolbar>
-  
-  
-  
-  <div class="mat-card" style="background-color: #C5CAE9;"
-    
-    *ngFor = "let profitquery of profitqueryDataList ">
-    
+
+  <!-- <div class="container" style="border: 1px solid grey; margin-top: 10px; margin-bottom: 20px;"> -->
+
+
+  <mat-toolbar color="primary">
+    <span>All Queries</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+  </mat-toolbar>
+
+
+
+  <div class="mat-card" style="background-color: #C5CAE9;" *ngFor="let profitquery of profitqueryDataList ">
+
     <div>
-      <mat-card-subtitle>  
+      <mat-card-subtitle>
         <!-- <label for="">Name: </label> -->
-        <a>{{profitquery.name}} 
+        <a>{{profitquery.name}}
           {{profitquery.timestamp}} </a>
-        
-      </mat-card-subtitle>    
-      </div>
-    
-      
 
-      <div class="mat-card" >
-        <mat-icon color="primary" style="padding-top: 5px;"> feedback</mat-icon>
-        <mat-card-content>
+      </mat-card-subtitle>
+    </div>
+
+
+
+    <div class="mat-card">
+      <mat-icon color="primary" style="padding-top: 5px;"> feedback</mat-icon>
+      <mat-card-content>
         <a>{{profitquery.query}}</a>
       </mat-card-content>
       <mat-divider></mat-divider>
-      </div>
-      <div class ="mat-card" style="margin-bottom: 1rem;">
-        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" >
-          <mat-icon color="accent">speaker_notes</mat-icon>
-        </button>
-        <!-- <mat-icon color="warn">speaker_notes</mat-icon> -->
-        <mat-card-content>
+    </div>
+    <div class="mat-card" style="margin-bottom: 1rem;">
+      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon color="accent">speaker_notes</mat-icon>
+      </button>
+      <!-- <mat-icon color="warn">speaker_notes</mat-icon> -->
+      <mat-card-content>
         {{ profitquery.response}}
       </mat-card-content>
-      </div>
-
-
-
     </div>
+
+
+
+  </div>
 
   <!-- </div> -->
 

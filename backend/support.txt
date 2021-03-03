@@ -1,0 +1,4 @@
+http://api.marketstack.com/v1/
+f4f09a4e2bd4e7fbe977d106d5f4f9da
+
+aa4ce5bd83c6b430247663108a09b7c2

@@ -12,21 +12,7 @@ export class MoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  Portfolio(){
-    this.route1.navigate(["Portfolio"]);
-      }
-    
-    Home(){
-    this.route1.navigate(["Home"]);
-    
-    }
-    Social(){
-      this.route1.navigate(["Social"]);
-      
-    }
-    analysis(){
-      this.route1.navigate(["StockAnalysis"]);
-    }
+  
     Mo4(){
     this.route1.navigate(["Mo4"]);
         

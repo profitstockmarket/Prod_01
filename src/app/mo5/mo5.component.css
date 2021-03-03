@@ -32,3 +32,45 @@ max-width: 100%;
 #Imr_md_body{
   max-width: 100%;
 }
+
+.para2 {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: auto;
+  text-justify: newspaper;
+  display: inline;
+    
+}
+#para2{
+  font-size: 18px;
+
+}
+
+.para3 {
+  display: inline-block;
+  margin-right: 10px;
+  text-justify: newspaper;
+  display: inline;
+  font-size: 17px;
+}
+#img2 {
+  height: 39px;
+  width: auto;
+  align-items: flex-end;
+  margin-right: 20px;
+
+}
+
+#img1 {
+  height: 100px;
+  width: auto;
+  vertical-align: middle;
+  border: black;
+  border-width: 2px;
+  margin: 5px;
+}
+
+.header{
+font-size: 12px;
+
+}

@@ -11,6 +11,7 @@ import { Mo3Component } from './mo/mo3/mo3.component';
 import { Mo2Component } from './mo/mo2/mo2.component';
 import { ProfitQueryComponent } from './profit-query/profit-query.component';
 import { RegisternewComponent } from './registernew/registernew.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
  
 
@@ -29,13 +30,24 @@ const routes: Routes = [
 { path: 'Mo2', component: Mo2Component },
 { path: 'profitquery', component: ProfitQueryComponent },
 { path: 'registernew', component: RegisternewComponent },
+{ path: 'aboutus', component: AboutusComponent },
 
 ];
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  // imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+      scrollOffset: [0, 64] // [x, y]
+    })
+  ],
   exports: [RouterModule]
+  
 })
 
 
 export class AppRoutingModule {
+  
  }

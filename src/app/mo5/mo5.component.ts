@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,AfterViewInit } from '@angular/core';
 import { ChartType,ChartDataSets, ChartOptions, pluginService} from 'chart.js';
 import { Color, Label,SingleDataSet, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
+
 
 
 @Component({
@@ -43,8 +44,8 @@ public pieChartOptions: ChartOptions = {
   }
 };
 
-public pieChartLabels: Label[] = [['Promotor', 'Group'], ['FII ',], ['Retail'],'Mutual Funds'];
-public pieChartData: SingleDataSet = [59.91, 15, 10,10];
+public pieChartLabels: Label[] = [['Promotor', 'Group'], ['FII ',], ['Retail'],'Mutual Funds',['Foreign', 'Portfolio', 'Corporate/Fund'], ['Insurance','Companies'] ];
+public pieChartData: SingleDataSet = [42.50, 0.00, 20.79,5.97,24.78,5.96];
 public pieChartType: ChartType = 'pie';
 public pieChartLegend = true;
 public pieChartPlugins = [pluginService];
@@ -52,13 +53,13 @@ public pieChartPlugins = [pluginService];
 public barChartOptions: ChartOptions = {
   responsive: true,
 };
-public barChartLabels: Label[] = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
+public barChartLabels: Label[] = ['2015-16', '2016-17', '2017-18', '2018-19','2019-20'];
 public barChartType: ChartType = 'bar';
 public barChartLegend = true;
 public barChartPlugins = [];
 
 public barChartData: ChartDataSets[] = [
-  { data: [49.90, 87.69, 97.66, 80.44, 76.47, 90.30, 98.90,80.92,87.51,201.47], label: 'EPS' }
+  { data: [31.47,39.83,48.38,55.31,80.33], label: 'EPS' }
  
 ];
 
@@ -69,5 +70,6 @@ public barChartData: ChartDataSets[] = [
 
   ngOnInit(): void {
   }
-
+  
+ 
 }

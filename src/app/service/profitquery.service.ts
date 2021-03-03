@@ -14,8 +14,8 @@ const httpOptions = {
 export class Profitqueryservice {
     
 
-    // private queryurl = 'https://stockdata.profitstockmarket.com/api/profitquery';
-    private queryurl = 'http://localhost:8080/api/profitquerys';
+    private queryurl = 'https://stockdata.profitstockmarket.com/api/profitquerys';
+    // private queryurl = 'http://localhost:8080/api/profitquerys';
     constructor(private http:HttpClient) {
         
     }
