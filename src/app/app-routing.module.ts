@@ -12,6 +12,11 @@ import { Mo2Component } from './mo/mo2/mo2.component';
 import { ProfitQueryComponent } from './profit-query/profit-query.component';
 import { RegisternewComponent } from './registernew/registernew.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { SocialmediaComponent } from './socialmedia/socialmedia.component';
+import { TeamComponent } from './team/team.component';
+import { AdComponent } from './ad/ad.component';
+import { CsrComponent } from './social/csr/csr.component';
+
 
  
 
@@ -31,6 +36,10 @@ const routes: Routes = [
 { path: 'profitquery', component: ProfitQueryComponent },
 { path: 'registernew', component: RegisternewComponent },
 { path: 'aboutus', component: AboutusComponent },
+{ path: 'team', component: TeamComponent },
+{ path: 'socialmedia', component: SocialmediaComponent },
+{ path: 'ad', component: AdComponent },
+{ path: 'csr', component: CsrComponent },
 
 ];
 

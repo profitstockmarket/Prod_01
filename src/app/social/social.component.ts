@@ -17,17 +17,20 @@ export class SocialComponent implements OnInit {
     this.route1.navigate(["Homepage"]);
     
     }
-    Social(){
-      this.route1.navigate(["Social"]);
-      
-      }
-      analysis(){
-        this.route1.navigate(["StockAnalysis"]);
+  team(){
+    this.route1.navigate(["team"]);
+    
+    }
+  socialmedia(){
+    this.route1.navigate(["socialmedia"]);
+    
+    }
+  ad(){
+    this.route1.navigate(["ad"]);
+    
+    }
+    
         
-        }
-        Portfolio(){
-          this.route1.navigate(["Portfolio"]);
-            }
 
            
   

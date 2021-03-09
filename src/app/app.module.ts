@@ -38,6 +38,14 @@ import { Mo5Component } from './mo5/mo5.component';
 import { ProfitQueryComponent } from './profit-query/profit-query.component';
 import { RegisternewComponent } from './registernew/registernew.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { TeamComponent } from './team/team.component';
+import { AdComponent } from './ad/ad.component';
+import { SocialmediaComponent } from './socialmedia/socialmedia.component';
+import { Header2Component } from './social/header2/header2.component';
+import { CsrComponent } from './social/csr/csr.component';
+import { NgTickerModule } from 'ng-ticker';
+import {MatChipsModule} from '@angular/material/chips';
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 
 
 
@@ -63,6 +71,12 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     ProfitQueryComponent,
     RegisternewComponent,
     AboutusComponent,
+    TeamComponent,
+    AdComponent,
+    SocialmediaComponent,
+    Header2Component,
+    CsrComponent,
+    
     
     
     ],
@@ -86,6 +100,9 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     MatInputModule,
     MatProgressBarModule,
     MatExpansionModule,
+    NgTickerModule,
+    MatChipsModule,
+    NgxTwitterTimelineModule,
 
   ],
   providers: [],

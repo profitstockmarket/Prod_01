@@ -44,8 +44,8 @@ public pieChartOptions: ChartOptions = {
   }
 };
 
-public pieChartLabels: Label[] = [['Promotor', 'Group'], ['FII ',], ['Retail'],'Mutual Funds',['Foreign', 'Portfolio', 'Corporate/Fund'], ['Insurance','Companies'] ];
-public pieChartData: SingleDataSet = [42.50, 0.00, 20.79,5.97,24.78,5.96];
+public pieChartLabels: Label[] = [['Promotor', 'Group'],  ['Retail'],'Mutual Funds',['Foreign', 'Fund'], ['Insurance','Companies'] ];
+public pieChartData: SingleDataSet = [42.50, 20.79,5.97,24.78,5.96];
 public pieChartType: ChartType = 'pie';
 public pieChartLegend = true;
 public pieChartPlugins = [pluginService];

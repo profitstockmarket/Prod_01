@@ -9,3 +9,13 @@ color: blue;
 margin-bottom: 2px;
 background-color: lightgoldenrodyellow;
 }
+
+.img1{
+width: 800px;
+
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+  }

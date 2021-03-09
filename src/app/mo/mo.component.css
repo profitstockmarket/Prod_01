@@ -6,7 +6,7 @@
   }
 
   .example-header-image {
-    background-image: url('/assets/Logo/Favicon Logo Ver 2_small-1.png');
+    background-image: url('/assets/Logo/PNG/small_logoAsset\ 3mo.png');
     background-size: cover;
     height: 40px;
     width: 40px;
@@ -24,4 +24,9 @@
 .card-image{
 max-height: 220px;
 
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
 }
