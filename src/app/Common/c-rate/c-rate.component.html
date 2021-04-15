@@ -1,0 +1,50 @@
+<p>c-rate works!</p>
+
+
+
+
+
+
+<span class="fa fa-star-o" data-jest="empty star"></span>
+<span class="fa fa-star-o" data-jest="empty star"></span>
+<span class="fa fa-star-o" data-jest="empty star"></span>
+<span class="fa fa-star-o" data-jest="empty star"></span>
+<span class="fa fa-star-o" data-jest="empty star"></span>
+
+<div>
+<h1 class="text-primary">
+    Angular 10 Start Rating Example
+    </h1>
+    <ngb-rating [max]="5" [(rate)]="currentRate" [readonly]="false"></ngb-rating>
+    
+    
+    <h1 class="text-primary">
+        <ngb-rating [max]="5" [(rate)]="currentRate" [readonly]="false"></ngb-rating>
+      </h1>
+      <p>Rate: {{currentRate}}</p>
+      <!-- <p (onclick)= "overallrate()">Overall Rate: {{"test"}} </p> -->
+      <div>
+      <ngb-rating [max]="5" [(rate)]="avgStarrate5" [readonly]="false"></ngb-rating>
+    </div>
+    <ngb-rating [max]="4" [(rate)]="avgStarrate4" [readonly]="false"></ngb-rating>
+    <div></div>  
+   <div>
+    <ngb-rating [max]="3" [(rate)]="avgStarrate3" [readonly]="false"></ngb-rating>
+   </div>
+     <div>
+      <ngb-rating [max]="2" [(rate)]="avgStarrate2" [readonly]="false"></ngb-rating>
+     </div>
+      <div>
+        <ngb-rating [max]="1" [(rate)]="avgStarrate1" [readonly]="false"></ngb-rating>
+      </div>
+      
+      
+      
+
+
+    <p>Rate: </p>
+  
+        
+        
+     
+</div>

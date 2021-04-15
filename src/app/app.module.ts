@@ -9,7 +9,7 @@ import { SocialComponent } from './social/social.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { AddStocksPopupComponent } from './add-stocks-popup/add-stocks-popup.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule,NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import { PaginationModule } from 'ngx-pagination-bootstrap';
@@ -46,6 +46,9 @@ import { CsrComponent } from './social/csr/csr.component';
 import { NgTickerModule } from 'ng-ticker';
 import {MatChipsModule} from '@angular/material/chips';
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+import { CRateComponent } from './Common/c-rate/c-rate.component';
+import { LikeComponent } from './Common/like/like.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -76,6 +79,9 @@ import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
     SocialmediaComponent,
     Header2Component,
     CsrComponent,
+    CRateComponent,
+    LikeComponent,
+    DashboardComponent,
     
     
     
@@ -103,6 +109,7 @@ import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
     NgTickerModule,
     MatChipsModule,
     NgxTwitterTimelineModule,
+    NgbRatingModule,
 
   ],
   providers: [],
