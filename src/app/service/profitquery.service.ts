@@ -14,8 +14,8 @@ const httpOptions = {
 export class Profitqueryservice {
     
 
-    private queryurl = 'https://stockdata.profitstockmarket.com/api/profitquerys';
-    // private queryurl = 'http://localhost:8080/api/profitquerys';
+    //private queryurl = 'https://stockdata.profitstockmarket.com/api/profitquerys';
+    private queryurl = 'http://localhost:8080/api/profitquerys';
     constructor(private http:HttpClient) {
         
     }
@@ -25,10 +25,6 @@ export class Profitqueryservice {
       }
     
     
-    //   getstock(id: string): Observable<stock> {
-    //     const url = `${this.stocksUrl}/${id}`;
-    //     return this.http.get<stock>(url);
-    //   }
     subjectrefershpqs=new Subject<any>();
     refreshobservable=this.subjectrefershpqs.asObservable();
     refreshstocklist(profitquerys){
@@ -43,13 +39,6 @@ export class Profitqueryservice {
       
       }
      
-            
-      // deleteStock (profitquery: Profitquery | string): Observable<any> {
-      //   const id = typeof profitquery === 'string' ? profitquery : profitquery._id;
-      //   const url = `${this.queryurl}/${id}`;
-    
-      //   return this.http.delete<Profitquery>(url, httpOptions);
-      // }
     
       updatestock (profitquery: Profitquery): Observable<any> {
         return this.http.put(this.queryurl, profitquery, httpOptions);

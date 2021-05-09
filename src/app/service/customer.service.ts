@@ -2,7 +2,7 @@ import {Injectable,EventEmitter,Output} from '@angular/core';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
 import {Observable,Subject} from 'rxjs';
 // import {Stock } from '../../../model/stockdata';
-import {Customer } from '../../../model/customer';
+import {Customer } from '../../../model/regdata';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

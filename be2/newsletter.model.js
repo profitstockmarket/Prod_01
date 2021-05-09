@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { timestamp } = require('rxjs/operators');
 
-const CustomerSchema = mongoose.Schema({
+const NewsletterSchema = mongoose.Schema({
   
    emailid: String,
    ip: String,
@@ -13,13 +13,4 @@ const CustomerSchema = mongoose.Schema({
    timestamp:String
   });
 
-     email: string;
-     ip: any ; 
-     field1: any;
-     field2: any;
-     field3: any;
-     field4:any;
-     field5:any;
-     timestamp:any;
-
-module.exports = mongoose.model('Customer',CustomerSchema);
+ module.exports = mongoose.model('nl',NewsletterSchema);

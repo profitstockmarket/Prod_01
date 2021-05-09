@@ -2,13 +2,19 @@ module.exports = function (app) {
 
     const stocks = require('./stock.controller.js');
     const profitquerys = require('./profitquery.controller.js');
+    const regs = require('./regdb.controller.js');
+    const customers = require('./customer.controller.js');
 
+    //Create new Stock
+    app.post('/api/regs', regs.create);
     //Create new Stock
     app.post('/api/stocks', stocks.create);
 
     //Get all Stocks
 
     app.get('/api/stocks', stocks.findAll);
+    app.get('/api/regs', regs.findAll);
+    app.get('/api/customers', customers.findAll);
 
     // Delete a Stock with Id
     app.delete('/api/stocks/:_id', stocks.delete);

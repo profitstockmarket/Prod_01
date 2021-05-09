@@ -25,10 +25,10 @@
           <input type="text" class="form-control" [(ngModel)]="name" name="name" #namefield="ngModel" minlength="4"
             maxlength="30" required placeholder="Your Name">
 
-          <div *ngIf="!namefield.valid && namefield.touched " class="alert alert-danger">Namefield is mandatory. Alteast
+           <div *ngIf="!namefield.valid && namefield.touched " class="alert alert-danger">Namefield is mandatory. Alteast
             4 characters
 
-          </div>
+           </div>
 
         </div>
 
