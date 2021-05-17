@@ -45,24 +45,31 @@ analysis(){
   this.route1.navigate(["StockAnalysis"]);
 }
 
-onSubmit(data){
+onSubmit(data:NgForm){
 
 console.log("form submitted ",data)
-this.form.resetForm();
-alert("form submitted ")
-}
 
-subscribe(){
+//alert("form submitted ")
+
   let newrecord = new Reg(); 
   newrecord.emailid=this.emailid;
   newrecord.doa=this.date;
   newrecord.ip=this.ip;
   newrecord.timestamp=this.timestamp;
   
-  this.regservice.addregs(newrecord);
+  this.regservice.addregs(newrecord).subscribe(res =>
+    {console.log(res)}, 
+        err=>{console.log(err)}
+    );
+    
+
+
   console.log(newrecord)
-  
-    }
+  this.form.resetForm();
+
+
+}
+    
 
 }
 

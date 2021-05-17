@@ -11,8 +11,8 @@ const httpOptions = {
 
 export class RegService {
     
-     // private url = 'https://stockdata.profitstockmarket.com/api/regs';
-      private url = 'http://localhost:8080/api/regs';
+     private url = 'https://stockdata.profitstockmarket.com/api/regs';
+     // private url = 'http://localhost:8080/api/regs';
     constructor(private http:HttpClient) {
         
     }

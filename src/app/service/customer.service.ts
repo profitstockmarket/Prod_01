@@ -15,9 +15,9 @@ export class CustomerService {
     
     // private url = 'https://profitstockmarket.us-east-2.elasticbeanstalk.com/api/stocks';
     // private url = 'https://stockdata.profitstockmarket.com/api/stocks';
-    // private url = 'https://stockdata.profitstockmarket.com/api/customers';
+    private url = 'https://stockdata.profitstockmarket.com/api/customers';
     // private url = 'http://localhost:8080/api/stocks';
-    private url = 'http://localhost:8080/api/customers';
+    //private url = 'http://localhost:8080/api/customers';
     constructor(private http:HttpClient) {
         
     }
