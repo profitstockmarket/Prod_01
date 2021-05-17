@@ -24,10 +24,7 @@ export class StockService {
       }
     
     
-    //   getstock(id: string): Observable<stock> {
-    //     const url = `${this.stocksUrl}/${id}`;
-    //     return this.http.get<stock>(url);
-    //   }
+  
     subjectrefershstocks=new Subject<any>();
     refreshobservable=this.subjectrefershstocks.asObservable();
     refreshstocklist(stocks){

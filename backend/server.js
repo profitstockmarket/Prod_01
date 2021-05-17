@@ -31,9 +31,9 @@ const corsOptions = {
 }
 //app.use(cors(corsOptions))
 app.use(cors())
-require('./stock.route.js')(app);
-app.use(express.json());
 
+app.use(express.json());
+require('./stock.route.js')(app);
 //hardcode the port for node server to start listening to 
 const {port= 8080}= process.env;
 console.log('PORT is ', port)

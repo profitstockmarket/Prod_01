@@ -10,11 +10,18 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  @ViewChild('f') queryform: NgForm;
-  emailid= "";
-  doa= "";
-  ip= "";
-  timestamp= "";
+
+  @ViewChild('sform') form: NgForm;
+  
+  sform:any="";
+  emailid:any= "";
+  doa:any="dummy";
+  ip:any="dummy";
+  timestamp:any="";
+  post='No CONTENT';
+  date: any="";
+  
+ 
 
   constructor(private route1:Router, private regservice: RegService) { }
   
@@ -22,44 +29,40 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
 this.Show_accordionExample =false;
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+  var time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+  this.date = yyyy + '-' + mm + '-' + dd;
+  this.timestamp = this.date + "@" + time + "Local";
+
+
   }
 
 
-Portfolio(){
-this.route1.navigate(["Portfolio"]);
-  }
-
-Home(){
-this.route1.navigate(["Home"]);
-
-}
-Social(){
-  this.route1.navigate(["Social"]);
-  
-}
 analysis(){
   this.route1.navigate(["StockAnalysis"]);
 }
-Mo4(){
- this.route1.navigate(["Mo4"]);
-    
+
+onSubmit(data){
+
+console.log("form submitted ",data)
+this.form.resetForm();
+alert("form submitted ")
 }
 
-onSubmit(){
-  console.log(this.queryform);
-  this.queryform.resetForm();
-  //alert("Message : Query is Submitted Successfully.Your query will be screened and responded by ProfitStockmarket within 24 Hrs on this page");
-  }
-
-registeremail(){
-  let newemail = new Reg(); 
-  newemail.emailid=this.emailid;  
-  newemail.doa=this.doa;  
-  newemail.ip=this.ip;  
-  newemail.timestamp=this.timestamp;  
-  this.regservice.addregs(newemail)
-      
-            }
+subscribe(){
+  let newrecord = new Reg(); 
+  newrecord.emailid=this.emailid;
+  newrecord.doa=this.date;
+  newrecord.ip=this.ip;
+  newrecord.timestamp=this.timestamp;
+  
+  this.regservice.addregs(newrecord);
+  console.log(newrecord)
+  
+    }
 
 }
 

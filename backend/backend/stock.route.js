@@ -2,20 +2,13 @@ module.exports = function (app) {
 
     const stocks = require('./stock.controller.js');
     const profitquerys = require('./profitquery.controller.js');
-    const regs = require('./regdb.controller.js');
-    const customers = require('./customer.controller.js');
 
-    //Add new record of email in regs database in mongodb for subscribe function  
-    console.log('ready1');
-    app.post('/api/regs', regs.create);
-    //Add a new ecord of Stock
+    //Create new Stock
     app.post('/api/stocks', stocks.create);
 
     //Get all Stocks
 
     app.get('/api/stocks', stocks.findAll);
-    app.get('/api/regs', regs.findAll);
-    app.get('/api/customers', customers.findAll);
 
     // Delete a Stock with Id
     app.delete('/api/stocks/:_id', stocks.delete);

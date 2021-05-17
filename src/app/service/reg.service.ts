@@ -17,6 +17,8 @@ export class RegService {
         
     }
 
+
+    
       addregs(regdata): Observable<any> {
         return this.http.post(this.url,regdata,httpOptions);
         

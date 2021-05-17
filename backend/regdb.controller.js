@@ -20,7 +20,7 @@ exports.create = (req, res) => {
  
 //FETCH all Regs;
 exports.findAll = (req, res) => {
-    reg.find()
+    Reg.find()
     .then(regs => {
         res.json(regs);
     }).catch(err => {
