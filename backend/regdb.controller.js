@@ -9,7 +9,10 @@ exports.create = (req, res) => {
     // Save a Customer in the MongoDB
     reg.save()
     .then(data => {
-        res.json(data);
+        return res.status(200).json({
+            200:"valid email : Success"
+        });            
+        //res.json(data);
     }).catch(err => {
         res.status(500).json({
             msg: err.message

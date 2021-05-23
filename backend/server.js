@@ -25,8 +25,8 @@ console.log('Connection failed!!!',err);
 //mention the origin to handle CORS issue 
 const cors = require('cors'); 
 const corsOptions = { 
-    //origin:'http://localhost:4200', 
-    origin:'https://profitstockmarket.com',
+    origin:'http://localhost:4200', 
+    //origin:'https://profitstockmarket.com',
     optionSuccessStatus: 200
 }
 //app.use(cors(corsOptions))

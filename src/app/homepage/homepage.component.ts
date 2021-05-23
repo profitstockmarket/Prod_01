@@ -4,6 +4,7 @@ import{Reg} from '../../../model/regdata'
 import { RegService } from '../service/reg.service';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -16,7 +17,8 @@ export class HomepageComponent implements OnInit {
   sform:any="";
   emailid:any= "";
   doa:any="dummy";
-  ip:any="dummy";
+  ip:any="";
+  ipv:any="";
   timestamp:any="";
   post='No CONTENT';
   date: any="";
@@ -38,7 +40,36 @@ this.Show_accordionExample =false;
   this.timestamp = this.date + "@" + time + "Local";
 
 
+  //Get Ip Address for user choosing to register email 
+  this.regservice.loadIp().subscribe(ipvalue =>
+    
+    {
+      this.ip=ipvalue.ip;
+// loop starts for getgeo
+    this.regservice.getgeolocationfrmip(this.ip).subscribe(geolocationvalue =>
+      {
+        this.doa=geolocationvalue.city
+      }, 
+        err=>
+      {
+        console.log(err)
+      }
+    );
+  // loop ends for getgeo
+  
+  }, 
+        err=>{console.log(err)}
+  );
+  // loop ends for getip
+  
+
+    
+    
+
   }
+
+
+
 
 
 analysis(){
@@ -53,10 +84,12 @@ console.log("form submitted ",data)
 
   let newrecord = new Reg(); 
   newrecord.emailid=this.emailid;
-  newrecord.doa=this.date;
   newrecord.ip=this.ip;
+  newrecord.doa=this.doa;
+  
   newrecord.timestamp=this.timestamp;
   
+ 
   this.regservice.addregs(newrecord).subscribe(res =>
     {console.log(res)}, 
         err=>{console.log(err)}
@@ -69,7 +102,11 @@ console.log("form submitted ",data)
 
 
 }
-    
+   
+
+
+
+
 
 }
 
