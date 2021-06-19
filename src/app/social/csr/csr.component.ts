@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{StockService} from 'src/app/service/stock.service'
 
 @Component({
   selector: 'app-csr',

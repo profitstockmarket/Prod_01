@@ -50,6 +50,11 @@ import {NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import {NgTickerModule } from 'ng-ticker';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {PaginationModule } from 'ngx-pagination-bootstrap';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { Pf1TableComponent } from './pf1-table/pf1-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -81,6 +86,7 @@ import {PaginationModule } from 'ngx-pagination-bootstrap';
     SidebarComponent,
     SocialmediaComponent,
     TeamComponent,
+    Pf1TableComponent,
         
     ],
   imports: [
@@ -89,6 +95,7 @@ import {PaginationModule } from 'ngx-pagination-bootstrap';
     BrowserAnimationsModule,
     ChartsModule,
     FormsModule,
+    FlexLayoutModule,
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
@@ -108,6 +115,9 @@ import {PaginationModule } from 'ngx-pagination-bootstrap';
     NgbRatingModule,
     PaginationModule,
     ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
 
   ],
   providers: [],

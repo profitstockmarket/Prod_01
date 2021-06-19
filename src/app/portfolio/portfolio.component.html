@@ -9,8 +9,44 @@
   
 
 </head>
+
+
  
 <body>
+
+  <div class="container"  *ngFor = "let stockData of stockDataList">
+     <div>
+          <mat-card style="padding: 5px;margin-bottom: 25px;"> 
+             <mat-card-subtitle style="color: cornflowerblue;">{{stockData.stockname}} </mat-card-subtitle> 
+             <!-- <mat-card-subtitle>{{stockData.stockcode}}  </mat-card-subtitle>  -->
+             <mat-card-content>
+              <div fxLayout="row" fxFlex="1 0 0">
+                  <div fxLayout="column" style="width: 70px" >{{stockData.cmp}} <span class="mat-card-subtitle">CMP</span></div>
+                  <div fxLayout="column" id ="clmnstyle1" style= "margin-left:auto">{{stockData.recoprice}} <span class="mat-card-subtitle">Reco price</span>  </div>
+                  <div fxLayout="column" id ="clmnstyle1" style= "margin-left:auto">{{stockData.targetPrice}} <span class="mat-card-subtitle">Target</span> </div>
+                  <div fxLayout="column"id ="clmnstyle1"  style= "margin-left:auto" [ngStyle]= "{'background-color': getrgb(stockData.__v) ==='Green'?'#60f7a7':'#f56262'}">{{stockData.__v}} <span class="mat-card-subtitle">Total P&L</span> </div>
+              </div>
+              
+          </mat-card-content>
+             <mat-card-content>
+              <div fxLayout="row" fxFlex="1 0 0">
+                  <div fxLayout="column"style="width: 70px" >{{stockData.cmp}} <span class="mat-card-subtitle">Status</span></div>
+                  <div fxLayout="column" id ="clmnstyle1" style="margin-left:auto">{{stockData.disclaimer}} <span class="mat-card-subtitle">I Own It ?</span>  </div>
+                  <div fxLayout="column" id ="clmnstyle1" style="margin-left:auto">{{stockData.recodate}} <span class="mat-card-subtitle">Reco  date</span> </div>
+                  <div fxLayout="column" id ="clmnstyle1" style="margin-left:auto">{{stockData.dailyChange_prcnt2}} <span class="mat-card-subtitle">Daily P&L</span> </div>
+              </div>
+              
+          </mat-card-content>
+             
+
+          </mat-card>
+      
+     </div>
+    
+    
+
+  </div>
+
 
 
 
@@ -34,9 +70,9 @@
   {{message}}
 </div> -->
 
-<div >
-    <table class="table table-hover">
-      <!-- <caption>List of users</caption> -->
+<!-- <div > -->
+    <!-- <table class="table table-hover"> -->
+      <!-- 
       <thead class="thead-dark">
     <tr>
       <th>Stock Name </th>
@@ -51,12 +87,12 @@
       <th>Status</th>
       <th>Sector</th>
       <th>M Cap</th>
-      <!-- <th>Action</th> -->
-    </tr>
+       <th>Action</th> -->
+    <!-- </tr>
     </thead>
     <tbody>
-       
-              <tr *ngFor = "let stockData of stockDataList | paginate: { itemsPerPage: 10, currentPage: p }"  >
+        -->
+              <!-- <tr *ngFor = "let stockData of stockDataList | paginate: { itemsPerPage: 10, currentPage: p }"  >
 
         <td>{{stockData.stockname}} </td>
         <td>{{stockData.stockcode}} </td>
@@ -71,7 +107,7 @@
         <td class="has-text-align-center" data-align="center" [ngClass]= "{Row_TargetAchieved : stockData.cmp >= stockData.targetPrice}" >ACTIVE </td>
         
           <td class="has-text-align-left" data-align="center">{{stockData.sector}}</td>
-        <td class="has-text-align-left" data-align="center">{{stockData.marketcap}}</td>
+        <td class="has-text-align-left" data-align="center">{{stockData.marketcap}}</td> -->
         <!-- <td><span class="table-remove"><button type="button"
 
           class="btn btn-secondary btn-rounded btn-sm my-0">Edit</button></span></td> -->
@@ -82,7 +118,7 @@
                 <button ngbDropdownItem >Edit</button>
                 <button ngbDropdownItem>Duplicate</button>
                 <div class="dropdown-divider"></div>
-                <!-- <button ngbDropdownItem (click)='deleteStock(stockData)'>Delete</button> -->
+                 <button ngbDropdownItem (click)='deleteStock(stockData)'>Delete</button> -->
                 <!-- <button  ngbDropdownItem   (click)='deleteStock(stockData)'>Delete</button> -->
               <!-- </div> -->
             <!-- </div> -->
@@ -90,7 +126,7 @@
 
         
            
-      </tr>
+      <!-- </tr>
       
   </table>
 
@@ -100,7 +136,7 @@
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
   
 
- 
+  -->
 
 
 </body>

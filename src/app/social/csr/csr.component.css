@@ -1,0 +1,14 @@
+#a1{
+    margin-right: 10px;
+     
+    
+    }
+
+    #img1 {
+        height: 30px;
+        width: 70px;
+        /* vertical-align: baseline; */
+        border: black;
+        /* border-width: 2px;
+        margin: 5px; */
+      }

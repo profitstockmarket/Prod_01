@@ -6,7 +6,6 @@ module.exports = function (app) {
     const customers = require('./customer.controller.js');
 
     //Add new record of email in regs database in mongodb for subscribe function  
-    console.log('ready1');
     app.post('/api/regs', regs.create);
     //Add a new ecord of Stock
     app.post('/api/stocks', stocks.create);

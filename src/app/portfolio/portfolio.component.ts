@@ -62,6 +62,18 @@ export class PortfolioComponent implements OnInit {
     const prcnt = ((targetPrice - recoprice) /(targetPrice)*100);
     return prcnt.toFixed(2);
   }
+  
+  getrgb(input) {
+    //check type of variable input 
+    var stscolor = "Green"
+    var pointNum = parseFloat(input);
+    if (pointNum < 0.01) {
+      stscolor = "Red"
+    }
+    return stscolor ;  
+  }
+  
+  
   deleteStock(stockData){
 this.stockservice.deleteStock(stockData._id).subscribe(result=> {this.message ="Stock Deleted Successfully";
 this.stockservice.getStocks()
