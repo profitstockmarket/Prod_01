@@ -72,14 +72,14 @@ export class PortfolioComponent implements OnInit {
     }
     return stscolor ;  
   }
-  
+
   
   deleteStock(stockData){
 this.stockservice.deleteStock(stockData._id).subscribe(result=> {this.message ="Stock Deleted Successfully";
 this.stockservice.getStocks()
       .subscribe(
         stocks => {
-          console.log(stocks);
+          // console.log(stocks);
           this.stockservice.refreshstocklist(stocks);
           this.message=null;
         }

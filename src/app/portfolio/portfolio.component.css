@@ -1,11 +1,12 @@
+.body{
+background-color: lightsteelblue;
+
+}
+
 .nav-link{
     cursor: pointer;
     }
 
-.Row_TargetAchieved{
-background-color: rgb(11, 224, 11);
-
-}
 .rgb{
 background-color: #60f7a7;
 

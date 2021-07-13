@@ -17,7 +17,8 @@ const StockSchema = mongoose.Schema({
    __v:String,
    dailyChange_prcnt:String,
    dailyChange_prcnt2:String,
-   dailyChange_val:String
+   dailyChange_val:String,
+   stock_status:String
      
 
 });

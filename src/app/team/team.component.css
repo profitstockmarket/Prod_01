@@ -1,7 +1,16 @@
-.para2 {
-    display: inline-block;
-    margin-right: 10px;
-    text-justify: newspaper;
-    display: inline;
-  }
-  
+#headpic {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  max-height: 40%;
+  width: 100%;
+  vertical-align: middle;
+}
+img {
+  display: inline-block;
+  width: 40%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
