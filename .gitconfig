@@ -1,0 +1,11 @@
+[core]
+	editor = \"C:/Users/user/AppData/Local/Programs/Microsoft VS Code/Code.exe\" --wait
+[pull]
+	rebase = false
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
+[user]
+	email = shashi.shekhar@outlook.com
+	name = shashi shekhar_admin
